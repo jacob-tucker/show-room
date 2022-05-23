@@ -103,7 +103,13 @@ main {
   overflow-y: scroll;
 }
 
-.list-element .star {
+.project-thing {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.list-element .star, .project-thing .star {
   position: absolute;
   margin: 20px;
   top: 0;
@@ -134,4 +140,13 @@ main {
   .list-element {
     width: 300px;
   }
+}
+
+.p-header {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
 }

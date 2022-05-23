@@ -12,13 +12,15 @@ function Project({ project }) {
   }
 
   return (
-    <article className="list-element">
-      <small className="star" onClick={() => addStar(project.name)}>★{project.stars}</small>
-      <h2>{project.name}</h2>
-      <h6>Creator: {project.creator}</h6>
-      <img src={`https://ipfs.infura.io/ipfs/${project.image}`} alt="project image" />
-      <p>{project.description}</p>
-    </article>
+    <a style={{textDecoration: 'none', color: 'black'}} href={`/project?projectName=${project.name}`}>
+      <article className="list-element">
+        <small className="star" onClick={() => addStar(project.name)}>★{project.stars}</small>
+        <h2>{project.name}</h2>
+        <h6>Creator: {project.creator}</h6>
+        <img src={`https://ipfs.infura.io/ipfs/${project.image}`} alt="project image" />
+        <p style={{textDecoration: 'none', color: 'black'}}>{project.description}</p>
+      </article>
+    </a>
   )
 }
 
