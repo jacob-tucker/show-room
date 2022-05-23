@@ -140,6 +140,14 @@ main {
   .list-element {
     width: 300px;
   }
+
+  .list-element .star, .project-thing .star {
+    position: absolute;
+    margin: 5px;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+  }
 }
 
 .p-header {
