@@ -3,6 +3,7 @@ import Project from "../components/Project.js";
 
 function List() {
   const [projects, setProjects] = useState([]);
+  console.log(projects)
 
   useEffect(() => {
     fetchProjects();
@@ -14,8 +15,7 @@ function List() {
     });
 
     const results = await response.json();
-    console.log(results);
-    setProjects(results);
+    setProjects(results || []);
   }
 
   return (

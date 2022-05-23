@@ -23,6 +23,7 @@ function Upload() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     })
+    console.log(uploaded)
     setUploaded(true);
   }
 
