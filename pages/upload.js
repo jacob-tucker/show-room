@@ -1,7 +1,9 @@
-import {create} from 'ipfs-http-client';
+import { create } from 'ipfs-http-client';
+import { useState } from 'react';
 const client = create('https://ipfs.infura.io:5001/api/v0');
 
 function Upload() {
+  const [uploaded, setUploaded] = useState(false);
   async function handleSubmit(e) {
     e.preventDefault();
     const target = e.target;
@@ -16,11 +18,12 @@ function Upload() {
       creator: target.creator.value,
       stars: 0
     }
-    const response = await fetch('/api/post', {
+    const response = await fetch('https://show-room.vercel.app/api/post', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     })
+    setUploaded(true);
   }
 
   return (
@@ -47,7 +50,10 @@ function Upload() {
           <label htmlFor="color">Choose a color for your project</label>
           <input type="color" name="color" id="color" />
 
-          <button type="submit">Upload to Show Room</button>
+          {!uploaded
+            ? <button type="submit">Upload to Show Room</button>
+            : <button>Done!</button>
+          }
         </form>
       </article>
     </main>
