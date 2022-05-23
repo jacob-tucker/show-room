@@ -41,7 +41,7 @@ export default function Project() {
         <h1 style={{color: project.color}} className="no-margin">{project.name}</h1>
         <h6>Creator: {project.creator}</h6>
         {project.youtube
-          ? <iframe width="560" height="315" src={project.youtube.replace('watch?v=', '/embed/')} />
+          ? <iframe className="youtube-vid" src={project.youtube.replace('watch?v=', '/embed/')} />
           : <img src={`https://ipfs.infura.io/ipfs/${project.image}`} alt="project image" />
         }
         <p className="p-header">DESCRIPTION</p>

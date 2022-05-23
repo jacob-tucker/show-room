@@ -130,6 +130,20 @@ main {
   margin-bottom: 5px;
 }
 
+.p-header {
+  margin-top: 30px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.youtube-vid {
+  width: 560px;
+  height: 315px;
+}
+
 @media all and (max-width: 800px) {
   .list-max {
     display: grid;
@@ -148,13 +162,12 @@ main {
     right: 0;
     font-size: 30px;
   }
-}
 
-.p-header {
-  margin-top: 30px;
-  margin-bottom: 0px;
-  text-transform: uppercase;
-  font-family: monospace;
-  font-size: 20px;
-  font-weight: bold;
+  .youtube-vid {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 100px;
+  }
 }
