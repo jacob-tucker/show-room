@@ -64,6 +64,7 @@ nav {
   padding: 30px;
   z-index: 1;
   box-shadow: 2px 2px 2px 1px rgb(221, 216, 216);
+  background-color: var(--primary-inverse);
 }
 
 nav h2 {
