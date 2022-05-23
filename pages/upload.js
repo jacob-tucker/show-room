@@ -18,7 +18,7 @@ function Upload() {
       creator: target.creator.value,
       stars: 0
     }
-    const response = await fetch('https://show-room.vercel.app/api/post', {
+    const response = await fetch('/api/post', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
