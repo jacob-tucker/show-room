@@ -18,6 +18,7 @@ function Upload() {
       creator: target.creator.value,
       stars: 0
     }
+    console.log(data);
     const response = await fetch('/api/post', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
