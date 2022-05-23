@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import "@picocss/pico";
 import Head from 'next/head';
+import Link from 'next/link';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,13 +13,12 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <nav>
-        <a className="no-margin no-decor" href="/">Show Room</a>
+        <Link className="no-margin no-decor" href="/">
+          <h1 className='no-margin' style={{ cursor: 'pointer' }}>Show Room</h1>
+        </Link>
         <ul>
           <li>
-            <a href="/upload">Upload</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
+            <Link href="/upload"><span style={{ cursor: 'pointer' }}>Upload</span></Link>
           </li>
         </ul>
       </nav>
