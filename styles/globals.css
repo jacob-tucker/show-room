@@ -40,7 +40,9 @@ button {
   font-weight: bold;
 }
 
-h1, h2, gh3 {
+h1,
+h2,
+gh3 {
   margin-bottom: 0;
 }
 
@@ -60,11 +62,9 @@ nav {
   top: 0px;
   display: flex;
   align-items: center;
-  color: var(--primary);
   padding: 30px;
   z-index: 1;
   box-shadow: 2px 2px 2px 1px rgb(221, 216, 216);
-  background-color: var(--primary-inverse);
 }
 
 nav h2 {
@@ -110,7 +110,8 @@ main {
   height: auto;
 }
 
-.list-element .star, .project-thing .star {
+.list-element .star,
+.project-thing .star {
   position: absolute;
   margin: 20px;
   top: 0;
@@ -126,7 +127,8 @@ main {
   margin-bottom: 10px;
 }
 
-.list-element h2, .list-element h6 {
+.list-element h2,
+.list-element h6 {
   text-align: center;
   margin-bottom: 5px;
 }
@@ -151,12 +153,13 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 1000px;
   }
-  
+
   .list-element {
     width: 300px;
   }
 
-  .list-element .star, .project-thing .star {
+  .list-element .star,
+  .project-thing .star {
     position: absolute;
     margin: 5px;
     top: 0;
