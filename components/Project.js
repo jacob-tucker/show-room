@@ -23,7 +23,7 @@ function Project({ project, tab }) {
   return (
     <Link style={{ textDecoration: 'none', cursor: 'pointer' }} href={`/project?projectName=${project.name}`}>
       <article className="list-element" style={{ cursor: 'pointer' }}>
-        <small className="star" onClick={() => addStar(project.name)}>★{project.stars}</small>
+        <small className="star" onKeyDown={onEnter} onClick={() => addStar(project.name)} tabIndex={tab}>★{project.stars}</small>
         <h2>{project.name}</h2>
         <h6>Creator: {project.creator}</h6>
         <img src={`https://ipfs.infura.io/ipfs/${project.image}`} alt="project image" />
