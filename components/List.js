@@ -20,7 +20,7 @@ function List() {
 
   return (
     projects.map((project, key) => (
-      <Project project={project} key={key} />
+      <Project project={project} key={key} tab={key} />
     ))
   )
 }

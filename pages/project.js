@@ -34,15 +34,21 @@ export default function Project() {
     window.location.reload();
   }
 
+  function onEnter(event) {
+    if(event.key === 'Enter'){
+      addStar(project.name);
+    }
+  }
+
   return (
     <main>
       <article className="project-thing">
-        <small className="star" onClick={() => addStar(project.name)}>★{project.stars}</small>
+        <small className="star" onKeyDown={onEnter} onClick={() => addStar(project.name)} tabIndex={1}>★{project.stars}</small>
         <h1 style={{color: project.color}} className="no-margin">{project.name}</h1>
         <h6>Creator: {project.creator}</h6>
         {project.youtube
           ? <iframe className="youtube-vid" src={project.youtube.replace('watch?v=', '/embed/')} />
-          : <img src={`https://ipfs.infura.io/ipfs/${project.image}`} alt="project image" />
+          : <img src={`https://ipfs.infura.io/ipfs/${project.image}`} alt="project" />
         }
         <p className="p-header">DESCRIPTION</p>
         <p>{project.description}</p>

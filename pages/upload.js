@@ -53,7 +53,7 @@ function Upload() {
           <input type="color" name="color" id="color" />
 
           {!uploaded
-            ? <button type="submit">Upload to Show Room</button>
+            ? <button type="submit" tabIndex={1}>Upload to Show Room</button>
             : <button>Done!</button>
           }
         </form>
