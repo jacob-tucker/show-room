@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         </Link>
         <ul>
           <li>
-            <Link href="/upload"><span style={{ cursor: 'pointer' }}>Upload</span></Link>
+            <Link href="/upload"><span style={{ cursor: 'pointer' }} tabIndex={3}>Upload</span></Link>
           </li>
         </ul>
       </nav>
